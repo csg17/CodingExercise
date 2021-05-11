@@ -60,10 +60,9 @@ d3.csv("https://raw.githubusercontent.com/csg17/d3data/master/temperature2.csv",
   //   .interpolator(d3.interpolateSinebow)
   // var myColor = d3.schemeRdYlBu[3][2];
 
-  var myColor = d3.scaleLinear()
-    .range(["#FAF0BE", "#960018"])
-  // .range(["yellow", "red"])
-    .domain([18, 37])
+  var myColor = d3.scaleSequential()
+    .domain([18,38])
+    .interpolator(d3.interpolateInferno)
     // .interpolate(d3.interpolateRound)
   
   // create a tooltip
